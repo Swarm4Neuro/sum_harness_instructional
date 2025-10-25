@@ -10,9 +10,6 @@
 void 
 setup(int64_t N, int64_t A[])
 {
-   for(int64_t i = 0; i < N; i++) {
-      A[i] = i; 
-   }
    printf(" inside direct_sum problem_setup, N=%lld \n", N);
 }
 

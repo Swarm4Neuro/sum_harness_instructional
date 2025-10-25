@@ -16,6 +16,8 @@
 
 #include "sums.h"
 
+
+
 /* The benchmarking program */
 int main(int argc, char** argv) 
 {
@@ -38,11 +40,15 @@ int main(int argc, char** argv)
       setup(n, &A[0]);
 
       // insert your timer code here
+      auto beg = std::chrono::high_resolution_clock::now();
 
       // invoke method to perform the sum
       t = sum(n, &A[0]);
 
       // insert your end timer code here, and print out elapsed time for this problem size
+      auto end = std::chrono::high_resolution_clock::now();
+      double elapsed = std::chrono::duration<double>(end - beg).count();
+      std::cout << "Elapsed time: " << elapsed << "\n";
 
       printf(" Sum result = %lf \n",t);
 
